@@ -1,0 +1,1 @@
+import{j as r}from"./index-Bb4PeO6A.js";import{P as n}from"./Progress-Bt3hLkmt.js";function c({product:e,isLoading:i}){return r.jsx("div",{className:"product-description",children:i?r.jsx(n,{height:"200px"}):r.jsx(r.Fragment,{children:e?r.jsx(r.Fragment,{children:e.description.map((s,t)=>r.jsx("p",{children:s},e.id+t))}):""})})}export{c as default};

@@ -1,0 +1,1 @@
+import{j as s,aS as o}from"./index-Bb4PeO6A.js";function r({btnTitle:n,func:t}){return s.jsxs("button",{type:"submit",className:"btn",onClick:()=>{t&&t()},children:[n,s.jsx(o,{className:"icon"})]})}export{r as B};
