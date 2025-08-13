@@ -1,1 +1,0 @@
-import{j as r,al as e}from"./index-CY_IFIoQ.js";function i({height:s}){return r.jsx("div",{className:"circular-progress",style:{width:"100%",height:`${s}`,display:"flex",alignItems:"center",justifyContent:"center"},children:r.jsx(e,{sx:{color:"#6f42c1"}})})}export{i as P};
