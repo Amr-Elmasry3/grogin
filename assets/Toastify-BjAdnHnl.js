@@ -1,1 +1,0 @@
-import{j as s,e}from"./index-CdliZPC_.js";function a(){return s.jsx("div",{className:"my-toastify",style:{position:"fixed",zIndex:"100"},children:s.jsx(e,{pauseOnHover:!1,pauseOnFocusLoss:!1})})}export{a as default};
