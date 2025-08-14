@@ -1,0 +1,45 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+.btn {
+  position: relative;
+  background-color: $bs-white;
+  font-size: 13px;
+  font-weight: 600;
+  color: $bs-black;
+  padding: 4px 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  transition: $transition;
+  z-index: 0;
+  overflow: hidden;
+  cursor: pointer;
+  text-wrap-mode: nowrap;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    background-color: $bs-purple;
+    z-index: -1;
+    transition: $transition;
+  }
+
+  &:hover {
+    color: $bs-white;
+  }
+
+  &:hover::before {
+    left: 0;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+}

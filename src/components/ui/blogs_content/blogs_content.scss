@@ -1,0 +1,37 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+.blogs-content {
+  .blog-box {
+    margin: 0 0 40px;
+
+    img {
+      border-radius: $radius-one;
+    }
+
+    .title {
+      font-size: 30px;
+      font-weight: 700;
+      color: $bs-black;
+      margin: 15px 0 10px;
+    }
+
+    .date {
+      font-size: 14px;
+      font-weight: 500;
+      color: $bs-gray;
+    }
+
+    .blog {
+      margin: 15px 0;
+      font-size: 15px;
+      color: $bs-gray;
+    }
+
+    .btn {
+      background-color: $bs-purple;
+      color: $bs-white;
+      border-radius: $radius-one;
+    }
+  }
+}

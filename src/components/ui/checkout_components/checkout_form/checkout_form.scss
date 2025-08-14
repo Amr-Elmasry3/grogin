@@ -1,0 +1,62 @@
+// Import Vraiables
+@use "../../../../sass/helpers/variables" as *;
+
+.checkout-form {
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: $bs-black;
+  }
+
+  form {
+    margin: 20px 0;
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      label {
+        font-size: 12px;
+        font-weight: 500;
+        color: $bs-gray;
+
+        span {
+          color: $bs-purple;
+        }
+      }
+
+      input {
+        height: 36px;
+        font-size: 15px;
+        color: $bs-gray;
+        background-color: transparent;
+        border: $border-one;
+        border-radius: $radius-one;
+        padding: 0 7px;
+        transition: $transition;
+        -webkit-transition: $transition;
+        -moz-transition: $transition;
+        -ms-transition: $transition;
+        -o-transition: $transition;
+
+        &:focus {
+          border-color: $bs-purple;
+          border-width: 2px;
+        }
+      }
+    }
+
+    .btn {
+      margin: 20px 0 0;
+      background-color: $bs-purple;
+      color: $bs-white;
+      justify-content: center;
+      border-radius: $radius-one;
+
+      .icon {
+        display: none;
+      }
+    }
+  }
+}

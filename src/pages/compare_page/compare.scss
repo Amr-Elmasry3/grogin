@@ -1,0 +1,131 @@
+// Import Variables
+@use "../../sass/helpers/variables" as *;
+
+%same-padding {
+  padding: 10px;
+}
+
+.compare-page {
+  .container {
+    .table-cover {
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        background-color: transparent;
+        height: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $bs-purple;
+        border-radius: $radius-one;
+      }
+
+      .my-table {
+        background-color: $bs-white;
+        border-radius: $radius-one;
+        width: fit-content;
+        border: $border-one;
+
+        .main-box {
+          display: flex;
+          align-items: center;
+          border-bottom: $border-one;
+
+          .product-img,
+          .category,
+          .name,
+          .price,
+          .description,
+          .close {
+            border-left: $border-one;
+          }
+
+          .category,
+          .name,
+          .price,
+          .description {
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: $bs-gray-600;
+            @extend %same-padding;
+          }
+        }
+
+        .title {
+          min-width: 103px;
+          font-size: 15px;
+          font-weight: 600;
+          color: $bs-black;
+          text-align: center;
+
+          @extend %same-padding;
+        }
+
+        ul {
+          flex: 1;
+          display: flex;
+        }
+
+        .img-box {
+          ul {
+            .product-img {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @extend %same-padding;
+
+              img {
+                width: 190px;
+              }
+            }
+          }
+        }
+
+        .title-box {
+          ul {
+            .name {
+              width: 100%;
+              text-align: center;
+              @extend %same-padding;
+            }
+          }
+        }
+
+        .price-box {
+          ul {
+            .price {
+              font-size: 15px;
+              color: $bs-purple;
+            }
+          }
+        }
+
+        .remove-box {
+          ul {
+            .close {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @extend %same-padding;
+
+              .close-icon {
+                position: relative;
+                top: 0;
+                left: 0;
+                background-color: $bs-red;
+
+                .icon {
+                  color: $bs-white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

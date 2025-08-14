@@ -1,0 +1,54 @@
+// Import Variables
+@use "../../../../sass/helpers/variables" as *;
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: $transition;
+
+  .action-box {
+    background-color: $bs-white;
+    border: $border-one;
+    border-radius: $radius-one;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: $transition;
+
+    &.added {
+      background-color: $bs-purple;
+      border: none;
+
+      .icon {
+        color: $bs-white;
+      }
+    }
+
+    &:hover {
+      background-color: $bs-purple;
+      border: none;
+    }
+
+    &:hover > .icon {
+      color: $bs-white;
+    }
+
+    .icon {
+      font-size: 15px;
+      color: $bs-black;
+      transition: $transition;
+
+      &.compare {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+      }
+    }
+  }
+}

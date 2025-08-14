@@ -1,0 +1,135 @@
+// Import Variables
+@use "../helpers/variables" as *;
+
+.table-container {
+  box-shadow: none;
+  border-radius: $radius-one;
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $bs-purple;
+    border-radius: $radius-one;
+  }
+
+  .table {
+    .table-head {
+      .table-row {
+        .table-cell {
+          font-size: 14px;
+          font-weight: 600;
+          color: $bs-white;
+          background-color: $bs-purple;
+          border-right: $border-one;
+          border-left: $border-one;
+        }
+      }
+    }
+
+    .table-body {
+      .table-row {
+        .table-cell {
+          border-left: $border-one;
+          border-bottom: $border-one;
+
+          &:last-of-type {
+            border-right: $border-one;
+          }
+
+          .product-img {
+            width: 70px;
+          }
+
+          .category,
+          .title,
+          .stock,
+          .total {
+            font-size: 14px;
+            font-weight: 600;
+            color: $bs-black;
+            display: block;
+          }
+
+          .title {
+            color: $bs-gray;
+            margin: 5px 0 0;
+          }
+
+          .price {
+            font-size: 15px;
+            font-weight: 600;
+            color: $bs-purple;
+          }
+
+          .stock {
+            text-transform: capitalize;
+          }
+
+          .btn {
+            background-color: $bs-purple;
+            font-size: 12px;
+            color: $bs-white;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .icon {
+              display: none;
+            }
+          }
+
+          .quntity {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            border-radius: 12px;
+            background-color: $bs-gray-200;
+            padding: 5px;
+
+            .decrease-icon,
+            .increase-icon {
+              background-color: $bs-purple;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 20px;
+              height: 20px;
+              cursor: pointer;
+            }
+
+            .icon {
+              font-size: 16px;
+              font-weight: 700;
+              color: $bs-white;
+            }
+
+            .count {
+              font-size: 15px;
+              color: $bs-black;
+            }
+          }
+
+          .close-icon {
+            position: relative;
+            top: 0;
+            right: 0;
+            background-color: $bs-red;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 22px;
+            height: 22px;
+
+            .icon {
+              font-size: 16px;
+              color: $bs-white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

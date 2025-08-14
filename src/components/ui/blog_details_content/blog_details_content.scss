@@ -1,0 +1,147 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+.blog-details-content {
+  .details-content {
+    .img-box {
+      display: flex;
+      position: relative;
+      border-radius: $radius-one;
+      overflow: hidden;
+
+      .date-comments {
+        position: absolute;
+        bottom: 0;
+
+        .date,
+        .comments-count {
+          padding: 7px 10px;
+          font-size: 14px;
+          display: block;
+        }
+
+        .date {
+          background-color: $bs-white;
+          color: $bs-black;
+        }
+
+        .comments-count {
+          background-color: $bs-purple;
+          color: $bs-white;
+        }
+      }
+    }
+
+    .title {
+      font-size: 30px;
+      font-weight: 700;
+      color: $bs-black;
+      margin: 10px 0 15px;
+    }
+
+    p {
+      list-style: disc;
+      margin: 0 0 15px;
+      font-size: 15px;
+      color: $bs-gray;
+
+      &.diff {
+        background-color: $bs-purple;
+        color: $bs-white;
+        border-radius: $radius-one;
+        padding: 20px;
+      }
+    }
+  }
+
+  .comments-section,
+  .leave-comment {
+    margin: 25px 0 0;
+    padding: 25px 0 0;
+    border-top: $border-one;
+
+    .title {
+      color: $bs-black;
+      margin: 0 0 20px;
+    }
+  }
+
+  .comments-section {
+    .comments-content {
+      max-height: 250px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .box {
+        display: flex;
+        gap: 20px;
+
+        &:not(:last-of-type) {
+          margin: 0 0 30px;
+        }
+
+        .img-box {
+          position: relative;
+          min-width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          background-color: $bs-gray-500;
+          overflow: hidden;
+
+          .icon {
+            font-size: 30px;
+            color: $bs-white;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+          }
+        }
+
+        .comment-details {
+          .name {
+            font-size: 15px;
+            font-weight: 600;
+            color: $bs-black;
+            text-transform: capitalize;
+            margin: 0 0 5px;
+
+            .date {
+              font-size: 14px;
+              font-weight: 400;
+              color: $bs-gray;
+            }
+          }
+
+          .comment {
+            font-size: 14px;
+            color: $bs-gray;
+          }
+        }
+      }
+    }
+  }
+
+  .leave-comment {
+    form {
+      .btn {
+        margin: 15px 0 0;
+        background-color: $bs-purple;
+        color: $bs-white;
+        justify-content: center;
+        border-radius: $radius-one;
+
+        .icon {
+          display: none;
+        }
+      }
+    }
+  }
+}

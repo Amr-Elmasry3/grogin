@@ -1,0 +1,344 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../../sass/helpers/mixins" as *;
+
+.product-info {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 20px));
+  gap: 40px;
+
+  @include breakpoints("sm") {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .img-box {
+    position: relative;
+
+    .discount,
+    .badge {
+      position: absolute;
+      left: 0;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .discount {
+      background-color: $bs-danger;
+      color: $bs-white;
+      padding: 4px 8px;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .badge {
+      top: 25px;
+      font-size: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 4px 8px;
+
+      &.organic {
+        color: $bs-green;
+        background-image: linear-gradient(
+          90deg,
+          rgb(212, 252, 121) 0%,
+          rgb(150, 230, 161) 50%
+        );
+      }
+
+      &.cold-sale {
+        color: $bs-primary;
+        background-image: linear-gradient(
+          90deg,
+          rgb(165, 239, 255) 0%,
+          rgb(231, 248, 253) 50%
+        );
+      }
+    }
+
+    .small-imgs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      img {
+        width: 70px;
+        border: $border-one;
+        border-radius: $radius-one;
+        -webkit-border-radius: $radius-one;
+        -moz-border-radius: $radius-one;
+        -ms-border-radius: $radius-one;
+        -o-border-radius: $radius-one;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .details-box {
+    .name {
+      font-size: 36px;
+      color: $bs-black;
+    }
+
+    .global-info {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 7px 0;
+      margin: 10px 0;
+      padding: 0 0 10px;
+      border-bottom: $border-one;
+
+      .box {
+        padding: 0 12px;
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+
+        &:not(:last-of-type) {
+          border-right: $border-one;
+        }
+      }
+
+      .rate-box {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        .rate {
+          padding: 1px 6px;
+          border: $border-one;
+          border-radius: $radius-one;
+          font-size: 13px;
+          font-weight: 600;
+          color: $bs-black;
+        }
+
+        .count-reviews {
+          font-size: 13px;
+          font-weight: 600;
+          color: $bs-gray;
+        }
+      }
+
+      .store-box,
+      .sku-box {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        .key,
+        .value {
+          font-size: 14px;
+        }
+
+        .key {
+          font-weight: 500;
+          color: $bs-gray;
+        }
+
+        .value {
+          font-weight: 600;
+          color: $bs-black;
+        }
+      }
+    }
+
+    .description {
+      font-size: 14px;
+      color: $bs-gray;
+      margin: 15px 0 20px;
+    }
+
+    .price-box {
+      .new-price {
+        font-size: 28px;
+        font-weight: bolder;
+        color: $bs-red;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .old-price {
+          font-size: 18px;
+          color: $bs-black;
+          text-decoration: line-through;
+          text-decoration-color: $bs-danger;
+          -moz-text-decoration-color: $bs-danger;
+        }
+      }
+    }
+
+    .count-people-added {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #fff1e6;
+      border-radius: $radius-one;
+      padding: 12px;
+      margin: 15px 0 10px;
+
+      .icon {
+        font-size: 17px;
+        color: $bs-orange;
+      }
+
+      p {
+        font-size: 13px;
+        font-weight: 500;
+        color: $bs-orange;
+
+        span {
+          font-weight: 700;
+          padding: 0 2px;
+        }
+      }
+    }
+
+    .cart-action {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 20px 0 25px;
+
+      .quntity {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        border-radius: 12px;
+        background-color: $bs-gray-200;
+        padding: 5px;
+
+        .decrease-icon,
+        .increase-icon {
+          background-color: $bs-black;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+        }
+
+        .icon {
+          font-size: 16px;
+          font-weight: 700;
+          color: $bs-white;
+        }
+
+        .count {
+          font-size: 15px;
+          color: $bs-black;
+        }
+      }
+
+      .btn {
+        background-color: #20aa6a;
+        color: $bs-white;
+        border-radius: $radius-one;
+
+        &::before {
+          background-color: $bs-success;
+        }
+      }
+    }
+
+    .payment-info {
+      border: $border-one;
+      border-radius: $radius-one;
+
+      .box {
+        display: flex;
+        gap: 15px;
+        padding: 10px 15px;
+
+        &:first-of-type {
+          padding-bottom: 15px;
+          border-bottom: $border-one;
+        }
+
+        &:last-of-type {
+          padding-top: 15px;
+
+          .icon {
+            font-size: 26px;
+          }
+        }
+
+        .icon {
+          min-width: 28px;
+          font-size: 24px;
+          color: $bs-gray;
+          padding: 4px 0 0;
+        }
+
+        p {
+          font-size: 13px;
+          font-weight: 500;
+          color: $bs-gray;
+
+          span {
+            padding-right: 4px;
+            font-weight: 600;
+            color: $bs-gray-700;
+          }
+        }
+      }
+    }
+
+    .actions {
+      margin: 30px 0 0;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      .box {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        .icon-box {
+          border: $border-one;
+          border-radius: $radius-one;
+          width: 34px;
+          height: 34px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: $transition;
+
+          &:hover,
+          &.added {
+            border: none;
+            background-color: $bs-purple;
+
+            .icon {
+              color: $bs-white;
+              transition: $transition;
+            }
+          }
+
+          .icon {
+            font-size: 18px;
+            color: $bs-black;
+          }
+        }
+
+        span {
+          font-size: 14px;
+          font-weight: 600;
+          color: $bs-gray;
+        }
+      }
+    }
+  }
+}

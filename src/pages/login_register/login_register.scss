@@ -1,0 +1,80 @@
+// Import Variables
+@use "../../sass/helpers/variables" as *;
+
+.login-register {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 420px;
+    text-align: center;
+
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      margin: 0 0 20px;
+
+      span {
+        font-size: 26px;
+        font-weight: 700;
+        color: $bs-gray-500;
+        cursor: pointer;
+
+        &.active {
+          color: $bs-black;
+        }
+      }
+    }
+
+    .login-register-content {
+      .title {
+        font-size: 14px;
+        color: $bs-gray;
+        margin: 0 0 10px;
+      }
+
+      form {
+        width: 100%;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+
+        .lost-password {
+          text-align: end;
+          font-size: 13px;
+          color: $bs-purple;
+          margin: 5px 0 20px;
+        }
+
+        .description {
+          font-size: 12px;
+          color: $bs-gray;
+          margin: 5px 0 20px;
+
+          a {
+            color: $bs-purple;
+            padding: 0 4px;
+          }
+        }
+
+        .btn {
+          width: 100%;
+          background-color: $bs-purple;
+          color: $bs-white;
+          justify-content: center;
+          border-radius: $radius-one;
+
+          &:hover {
+            opacity: 0.9;
+          }
+
+          .icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

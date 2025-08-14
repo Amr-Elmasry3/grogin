@@ -1,0 +1,137 @@
+// Import Variables
+@use "../../../../sass/helpers/variables" as *;
+
+.cart-totals {
+  background-color: $bs-gray-100;
+  border: $border-one;
+  border-radius: $radius-one;
+  padding: 10px;
+  height: fit-content;
+
+  h1 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $bs-black;
+  }
+
+  .cart-totals-content {
+    border: $border-one;
+    border-radius: $radius-one;
+    margin: 12px 0 0;
+
+    .cart-totals-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        color: $bs-gray;
+
+        &:first-of-type {
+          flex: 1;
+          border-right: $border-one;
+        }
+
+        &:last-of-type {
+          min-width: 90px;
+        }
+      }
+    }
+
+    .cart-totals-body {
+      max-height: 270px;
+      overflow-y: scroll;
+      border-top: $border-one;
+      border-bottom: $border-one;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .product-box {
+        display: flex;
+        border-bottom: $border-one;
+
+        .product-img {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px;
+
+          img {
+            width: 69px;
+            border-radius: $radius-one;
+          }
+        }
+
+        .info {
+          flex: 1;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border-right: $border-one;
+          border-left: $border-one;
+          padding: 0 10px;
+
+          .name {
+            font-size: 14px;
+            font-weight: 600;
+            color: $bs-gray;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+          }
+
+          .count {
+            font-size: 13px;
+            font-weight: 500;
+            color: $bs-purple;
+          }
+        }
+
+        .total {
+          font-size: 14px;
+          font-weight: 600;
+          color: $bs-gray;
+          min-width: 90px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .cart-totals-footer {
+      .box {
+        display: flex;
+        align-items: center;
+        border-bottom: $border-one;
+
+        .key,
+        .value {
+          text-align: center;
+          font-size: 15px;
+          font-weight: 600;
+          padding: 10px;
+        }
+
+        .key {
+          min-width: 90px;
+          color: $bs-gray;
+          border-right: $border-one;
+        }
+
+        .value {
+          flex: 1;
+          color: $bs-purple;
+        }
+      }
+    }
+  }
+}

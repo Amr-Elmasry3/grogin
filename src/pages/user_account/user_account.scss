@@ -1,0 +1,89 @@
+// Import Variables
+@use "../../sass/helpers/variables" as *;
+
+.user-account {
+  .container {
+    display: flex;
+    gap: 20px;
+
+    .user-account-sidebar {
+      width: 290px;
+      border: $border-one;
+      border-radius: $radius-one;
+
+      li {
+        list-style: none;
+        padding: 15px 10px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $bs-black;
+        cursor: pointer;
+        transition: $transition;
+
+        &:not(:last-of-type) {
+          border-bottom: $border-one;
+        }
+
+        &.active,
+        &:hover {
+          color: $bs-purple;
+          background-image: linear-gradient(90deg, transparent, $bs-gray-200);
+        }
+      }
+    }
+
+    .user-account-content {
+      flex: 1;
+
+      .dashboard,
+      .orders,
+      .addresses,
+      .account-details {
+        border: $border-one;
+        border-radius: $radius-one;
+
+        .head {
+          padding: 12px;
+          background-image: linear-gradient(90deg, $bs-gray-200, transparent);
+          border-bottom: $border-one;
+
+          .title {
+            color: $bs-black;
+
+            span {
+              color: $bs-purple;
+            }
+          }
+        }
+
+        .cover {
+          padding: 15px 12px;
+        }
+      }
+
+      .dashboard {
+        p {
+          font-size: 14px;
+          color: $bs-gray;
+        }
+      }
+
+      .orders {
+        p {
+          font-size: 14px;
+          color: $bs-gray;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+
+          .btn {
+            background-color: $bs-purple;
+            color: $bs-white;
+            padding: 4px 12px;
+          }
+        }
+      }
+    }
+  }
+}

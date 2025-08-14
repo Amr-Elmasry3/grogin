@@ -1,0 +1,133 @@
+// Import Variables
+@use "../../../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../../../sass/helpers/mixins" as *;
+
+%same-link-style {
+  line-height: 1;
+  font-size: 13px;
+  font-weight: 500;
+  color: $bs-gray;
+  cursor: pointer;
+  transition: $transition;
+}
+
+.quick-links {
+  border-bottom: $border-one;
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+
+    @include breakpoints("xs") {
+      flex-direction: column;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding-right: 10px;
+      border-right: $border-one;
+
+      @include breakpoints("xl") {
+        display: none;
+      }
+
+      .link {
+        @extend %same-link-style;
+
+        &:hover {
+          color: $bs-purple;
+        }
+      }
+    }
+
+    .delivery-time {
+      flex: 1;
+      font-size: 13px;
+      color: $bs-gray;
+
+      span {
+        font-weight: 600;
+        color: $bs-red;
+      }
+    }
+
+    .left-section {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .box {
+        position: relative;
+
+        .head {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          cursor: pointer;
+
+          .current-value {
+            @extend %same-link-style;
+
+            &:hover {
+              color: $bs-purple;
+            }
+          }
+
+          .icon {
+            font-size: 16px;
+            color: $bs-gray;
+
+            &:hover {
+              color: $bs-purple;
+            }
+          }
+        }
+
+        .list {
+          position: absolute;
+
+          display: none;
+          left: 50%;
+          top: 30px;
+          transform: translateX(-50%);
+          background-color: $bs-white;
+          border-radius: $radius-one;
+          box-shadow: 0 0 5px #00000066;
+          z-index: 30;
+
+          li {
+            @extend %same-link-style;
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+              color: $bs-purple;
+            }
+
+            &.active {
+              color: $bs-purple;
+            }
+          }
+
+          &.open {
+            display: block;
+          }
+        }
+      }
+
+      .tracking-link {
+        @extend %same-link-style;
+
+        &:hover {
+          color: $bs-purple;
+        }
+      }
+    }
+  }
+}

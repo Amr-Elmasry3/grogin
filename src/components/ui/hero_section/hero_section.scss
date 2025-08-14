@@ -1,0 +1,160 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../../sass/helpers/mixins" as *;
+
+.hero-section {
+  margin: 0 0 80px;
+  position: relative;
+  width: calc(100% - 320px);
+  left: 100%;
+  transform: translateX(-100%);
+
+  @include breakpoints("xl") {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+
+  .mySwiper {
+    position: initial;
+
+    .slide {
+      .box {
+        min-height: 400px;
+        border-radius: $radius-one;
+        padding: 20px;
+
+        @include breakpoints("sm") {
+          height: 320px;
+          min-height: 0;
+        }
+
+        .cover {
+          width: 50%;
+
+          @include breakpoints("sm") {
+            width: 70%;
+          }
+
+          .discount-date {
+            background-image: linear-gradient(90deg, #19875459, transparent);
+            width: fit-content;
+            padding: 5px 14px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            color: $bs-success;
+
+            @include breakpoints("sm") {
+              font-size: 11px;
+              padding: 4px 8px;
+            }
+          }
+
+          .title {
+            font-size: 38px;
+            font-weight: 700;
+            color: $bs-dark-purple;
+            margin: 15px 0;
+
+            @include breakpoints("sm") {
+              font-size: 24px;
+            }
+
+            @include breakpoints("xxs") {
+              font-size: 20px;
+            }
+          }
+
+          .description {
+            font-size: 16px;
+            color: $bs-black;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+
+            @include breakpoints("sm") {
+              font-size: 14px;
+            }
+
+            @include breakpoints("xxs") {
+              font-size: 13px;
+            }
+          }
+
+          .price {
+            margin: 15px 0 20px;
+
+            .new-price {
+              display: flex;
+              align-items: center;
+              gap: 7px;
+              font-size: 24px;
+              font-weight: bold;
+              color: $bs-danger;
+
+              @include breakpoints("sm") {
+                font-size: 18px;
+              }
+
+              @include breakpoints("xxs") {
+                font-size: 16px;
+              }
+
+              .old-price {
+                font-size: 16px;
+                font-weight: 500;
+                color: $bs-black;
+                text-decoration: line-through;
+                text-decoration-color: $bs-red;
+                -moz-text-decoration-color: $bs-red;
+                text-decoration-thickness: 2px;
+
+                @include breakpoints("sm") {
+                  font-size: 14px;
+                }
+
+                @include breakpoints("xxs") {
+                  font-size: 12px;
+                  text-decoration-thickness: 1px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .swiper-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      width: fit-content;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 40%);
+      background-color: $bs-white;
+      padding: 5px 8px;
+      border-radius: 10px;
+
+      .swiper-pagination-bullet {
+        margin: 0;
+        background-color: $bs-gray-700;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: $bs-purple;
+      }
+    }
+  }
+}

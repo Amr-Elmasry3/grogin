@@ -1,0 +1,55 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+.contact-form {
+  form {
+    .box {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      label {
+        font-size: 12px;
+        font-weight: 500;
+        color: $bs-gray;
+
+        span {
+          color: $bs-purple;
+        }
+      }
+
+      input,
+      textarea {
+        height: 36px;
+        font-size: 15px;
+        color: $bs-gray;
+        background-color: transparent;
+        border: $border-one;
+        border-radius: $radius-one;
+        padding: 0 7px;
+        transition: $transition;
+
+        &:focus {
+          border-color: $bs-purple;
+          border-width: 2px;
+        }
+      }
+
+      textarea {
+        height: 120px;
+        resize: none;
+      }
+    }
+
+    .btn {
+      background-color: $bs-purple;
+      color: $bs-white;
+      margin: 15px 0 0;
+      border-radius: $radius-one;
+
+      .icon {
+        display: none;
+      }
+    }
+  }
+}

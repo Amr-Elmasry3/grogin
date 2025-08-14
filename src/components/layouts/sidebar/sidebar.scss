@@ -1,0 +1,84 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../../sass/helpers/mixins" as *;
+
+.sidebar {
+  position: fixed;
+  display: none;
+  z-index: 90;
+  left: -320px;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background-color: $bs-white;
+  border-right: $border-one;
+  padding: 25px 15px;
+  overflow-y: scroll;
+  transition: $transition;
+
+  @include breakpoints("xl") {
+    display: block;
+  }
+
+  &.open {
+    left: 0;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 30px;
+
+    img {
+      width: 115px;
+    }
+
+    .close-icon {
+      position: relative;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .search-box {
+    display: none;
+
+    @include breakpoints("md") {
+      display: flex;
+    }
+  }
+
+  .head {
+    margin: 20px 0;
+    justify-content: space-between;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0;
+
+    a {
+      padding: 15px 0;
+      font-size: 15px;
+      font-weight: 700;
+      color: $bs-black;
+      transition: $transition;
+
+      &:not(:last-of-type) {
+        border-bottom: $border-one;
+      }
+
+      &:hover {
+        color: $bs-purple;
+      }
+    }
+  }
+}

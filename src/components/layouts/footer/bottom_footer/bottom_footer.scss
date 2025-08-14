@@ -1,0 +1,23 @@
+// Import Variables
+@use "../../../../sass/helpers/variables" as *;
+
+.bottom-footer {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    p {
+      font-size: 13px;
+      color: $bs-black;
+    }
+
+    .payments {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}

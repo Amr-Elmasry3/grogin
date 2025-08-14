@@ -1,0 +1,59 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+// Handle Social links
+$socials: (
+  "facebook": (
+    color: #3b5998,
+    hover: #2b3f69,
+  ),
+  "twitter": (
+    color: #1da1f2,
+    hover: #196fa5,
+  ),
+  "linked-in": (
+    color: #0077b5,
+    hover: #013e5f,
+  ),
+  "youtube": (
+    color: #ff0000,
+    hover: #b40505,
+  ),
+);
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  a {
+    width: 34px;
+    height: 34px;
+    border-radius: $radius-one;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition;
+
+    .icon {
+      font-size: 18px;
+      color: $bs-white;
+    }
+
+    span {
+      font-size: 13px;
+      font-weight: 600;
+      color: $bs-white;
+    }
+
+    @each $social, $props in $socials {
+      &.#{$social} {
+        background-color: map-get($map: $props, $key: "color");
+      }
+
+      &.#{$social}:hover {
+        background-color: map-get($map: $props, $key: "hover");
+      }
+    }
+  }
+}

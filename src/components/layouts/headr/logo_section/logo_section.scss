@@ -1,0 +1,115 @@
+// Import Variables
+@use "../../../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../../../sass/helpers/mixins" as *;
+
+.logo-section {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 15px 0;
+
+    .menu {
+      display: none;
+
+      @include breakpoints("xl") {
+        display: block;
+      }
+
+      .icon {
+        font-size: 23px;
+        color: $bs-purple;
+        cursor: pointer;
+      }
+    }
+
+    .logo {
+      width: 135px;
+    }
+
+    .place-delivery {
+      @include breakpoints("xl") {
+        display: none;
+      }
+    }
+
+    .search-box {
+      flex: 1;
+
+      @include breakpoints("md") {
+        display: none;
+      }
+    }
+
+    .user-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .icon {
+        font-size: 22px;
+        color: $bs-dark;
+      }
+
+      .count {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $bs-red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        color: white;
+        top: 0px;
+        right: -10px;
+      }
+
+      .cart {
+        display: flex;
+        align-items: center;
+      }
+
+      .account,
+      .wishlist,
+      .cart {
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover > .icon {
+          color: $bs-purple;
+        }
+      }
+
+      .account {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        @include breakpoints("sm") {
+          display: none;
+        }
+
+        span {
+          font-size: 14px;
+          font-weight: 500;
+          color: $bs-gray;
+          transition: $transition;
+        }
+
+        &:hover > span {
+          color: $bs-purple;
+        }
+      }
+
+      .wishlist,
+      .cart {
+        position: relative;
+      }
+    }
+  }
+}

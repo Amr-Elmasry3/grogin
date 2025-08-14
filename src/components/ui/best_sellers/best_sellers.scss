@@ -1,0 +1,46 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../../sass/helpers/mixins" as *;
+
+.best-sellers {
+  margin: 0 0 30px;
+
+  .best-sellers-content {
+    border: $border-one;
+    border-right: none;
+    border-bottom: none;
+    border-radius: $radius-one;
+    -webkit-border-radius: $radius-one;
+    -moz-border-radius: $radius-one;
+    -ms-border-radius: $radius-one;
+    -o-border-radius: $radius-one;
+    overflow: hidden;
+
+    .MuiGrid-root {
+      @include breakpoints("xs") {
+        width: 100%;
+      }
+    }
+
+    .sell-box {
+      height: 100%;
+
+      .promo-section {
+        height: 100%;
+        margin: 0;
+
+        .promo-card {
+          border-radius: 0;
+        }
+      }
+
+      .product-card {
+        border-right: $border-one;
+        border-bottom: $border-one;
+        border-bottom-width: 2px;
+      }
+    }
+  }
+}

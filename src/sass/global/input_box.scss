@@ -1,0 +1,75 @@
+// Import Variables
+@use "../helpers/variables" as *;
+
+form {
+  .box {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 0 0 10px;
+
+    label {
+      font-size: 12px;
+      font-weight: 500;
+      color: $bs-gray;
+
+      span {
+        color: $bs-purple;
+      }
+    }
+
+    .input-box {
+      border: $border-one;
+      border-radius: $radius-one;
+      padding: 0 7px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: $transition;
+
+      &:focus-within {
+        border-color: $bs-purple;
+        border-width: 2px;
+      }
+
+      &.error {
+        border-color: $bs-red;
+      }
+
+      input,
+      textarea {
+        flex: 1;
+        height: 36px;
+        font-size: 15px;
+        color: $bs-gray;
+        background-color: transparent;
+      }
+
+      textarea {
+        height: 120px;
+      }
+
+      .error-icon {
+        font-size: 18px;
+        color: $bs-red;
+        display: none;
+      }
+    }
+
+    .error-message {
+      font-size: 12px;
+      color: $bs-red;
+    }
+
+    .icons-box {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .eye-icon {
+        cursor: pointer;
+        color: $bs-gray;
+      }
+    }
+  }
+}

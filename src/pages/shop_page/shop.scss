@@ -1,0 +1,26 @@
+// Import Mixins
+@use "../../sass/helpers/mixins" as *;
+
+.shop-page {
+  .container {
+    display: flex;
+    gap: 25px;
+
+    @include breakpoints("sm") {
+      flex-direction: column;
+
+      .shop-filter,
+      .shop-content {
+        width: 100% !important;
+      }
+    }
+
+    .shop-filter {
+      width: 260px;
+    }
+
+    .shop-content {
+      flex: 1;
+    }
+  }
+}

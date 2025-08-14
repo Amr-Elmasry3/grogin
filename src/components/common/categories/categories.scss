@@ -1,0 +1,182 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../../sass/helpers/mixins" as *;
+
+.categories {
+  .accordion {
+    box-shadow: none;
+    background-color: transparent;
+    width: 290px;
+    position: relative;
+    padding: 10px 15px;
+    border: $border-one;
+    border-bottom: none;
+    border-radius: 0 !important;
+    border-top-right-radius: $radius-one !important;
+    border-top-left-radius: $radius-one !important;
+
+    @include breakpoints("xl") {
+      width: 100%;
+      border: none;
+      background-color: $bs-purple;
+      border-radius: $radius-one !important;
+    }
+
+    .MuiAccordion-heading {
+      .MuiAccordionSummary-root {
+        padding: 0;
+        min-height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        .MuiAccordionSummary-content {
+          margin: 0;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .icon {
+            font-size: 16px;
+            color: $bs-black;
+
+            @include breakpoints("xl") {
+              color: $bs-white;
+            }
+          }
+
+          span {
+            font-size: 15px;
+            font-weight: 600;
+            color: $bs-black;
+
+            @include breakpoints("xl") {
+              color: $bs-white;
+            }
+          }
+        }
+
+        .MuiAccordionSummary-expandIconWrapper {
+          .icon {
+            font-size: 22px;
+            color: $bs-black;
+
+            @include breakpoints("xl") {
+              color: $bs-white;
+            }
+          }
+        }
+      }
+    }
+
+    .MuiCollapse-root {
+      background-color: $bs-white;
+      position: absolute;
+      z-index: 40;
+      top: 100%;
+      left: -1px;
+      width: 290px;
+      border: $border-one;
+      border-radius: 0 !important;
+      border-bottom-right-radius: $radius-one !important;
+      border-bottom-left-radius: $radius-one !important;
+
+      @include breakpoints("xl") {
+        width: 100%;
+      }
+
+      .MuiAccordionDetails-root {
+        padding: 0;
+      }
+    }
+
+    .accordion-details {
+      .box {
+        .category {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 12px;
+          font-size: 15px;
+          font-weight: 600;
+          color: $bs-black;
+          border-bottom: $border-one;
+          transition: $transition;
+          cursor: pointer;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 0;
+            background-color: $bs-purple;
+            top: 0;
+            left: 0;
+            transition: $transition;
+          }
+
+          &:hover::before {
+            height: 100%;
+          }
+
+          &:hover {
+            background-color: $bs-gray-100;
+          }
+
+          img {
+            width: 20px;
+          }
+
+          a {
+            flex: 1;
+            color: $bs-black;
+            text-wrap-mode: nowrap;
+          }
+
+          .icon {
+            font-size: 20px;
+          }
+        }
+
+        .sub-categories {
+          background-color: $bs-white;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 100%;
+          display: none;
+          border: $border-one;
+          border-top-right-radius: $radius-one;
+          border-bottom-right-radius: $radius-one;
+          padding: 15px 0;
+
+          @include breakpoints("xl") {
+            position: relative;
+            left: 0;
+          }
+
+          &.active {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .sub-category {
+            font-size: 14px;
+            font-weight: 400;
+            color: $bs-black;
+            padding: 8px 15px;
+            transition: $transition;
+
+            &:hover {
+              color: $bs-purple;
+            }
+          }
+        }
+      }
+    }
+  }
+}

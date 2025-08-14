@@ -1,0 +1,35 @@
+// Mixin One
+// Name => Break Points
+// Job => Handle Responsive Page
+
+@mixin breakpoints($size) {
+  @if $size == "xxs" {
+    @media (max-width: 490px) {
+      @content;
+    }
+  } @else if $size == "xs" {
+    @media (max-width: 590px) {
+      @content;
+    }
+  } @else if $size == "sm" {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $size == "md" {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if $size == "lg" {
+    @media (max-width: 1029px) {
+      @content;
+    }
+  } @else if $size == "xl" {
+    @media (max-width: 1115px) {
+      @content;
+    }
+  } @else if $size == "xxl" {
+    @media (max-width: 1400px) {
+      @content;
+    }
+  }
+}

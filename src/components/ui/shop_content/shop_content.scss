@@ -1,0 +1,161 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../../sass/helpers/mixins" as *;
+
+.shop-content {
+  .shop-content-headr {
+    background-color: $bs-gray-200;
+    padding: 10px;
+    margin: 0 0 15px;
+    border-radius: $radius-one;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 0;
+
+    @include breakpoints("xxs") {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      color: $bs-gray;
+
+      span {
+        font-weight: 700;
+        color: $bs-purple;
+      }
+    }
+
+    .style {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+
+      @include breakpoints("sm") {
+        display: none;
+      }
+
+      .box {
+        width: 26px;
+        height: 26px;
+        background-color: $bs-gray-400;
+        border-radius: $radius-one;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        cursor: pointer;
+        transition: transition;
+
+        &.active {
+          background-color: $bs-purple;
+        }
+
+        &:hover {
+          background-color: $bs-purple;
+        }
+
+        span {
+          width: 2px;
+          height: 14px;
+          background-color: $bs-white;
+          border-radius: 2px;
+        }
+      }
+    }
+
+    .sort {
+      position: relative;
+
+      .sort-head {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        span {
+          font-size: 13px;
+          font-weight: 600;
+          color: $bs-gray;
+        }
+
+        .value {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          font-size: 13px;
+          color: $bs-black;
+          cursor: pointer;
+
+          .icon {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .sort-list {
+        position: absolute;
+        background-color: $bs-white;
+        border: $border-one;
+        border-radius: $radius-one;
+        width: 100%;
+        height: 0;
+        top: 30px;
+        overflow: hidden;
+        transition: $transition;
+        z-index: 10;
+
+        &.open {
+          height: 137px;
+        }
+
+        li {
+          padding: 10px 5px;
+          font-size: 13px;
+          color: $bs-black;
+          transition: $transition;
+          cursor: pointer;
+
+          &:not(:last-of-type) {
+            border-bottom: $border-one;
+          }
+
+          &:hover {
+            background-color: $bs-purple;
+            color: $bs-white;
+          }
+
+          &.active {
+            background-color: $bs-purple;
+            color: $bs-white;
+          }
+        }
+      }
+    }
+  }
+
+  .shop-content-body {
+    display: grid;
+    border-top: $border-one;
+    border-left: $border-one;
+    border-radius: $radius-one;
+    overflow: hidden;
+
+    .product-card {
+      border-right: $border-one;
+      border-bottom: $border-one;
+      border-bottom-width: 2px;
+    }
+  }
+
+  .shop-content-footer {
+    margin: 30px 0 0;
+  }
+}

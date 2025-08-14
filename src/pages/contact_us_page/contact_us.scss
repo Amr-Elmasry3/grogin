@@ -1,0 +1,49 @@
+// Import Variables
+@use "../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../sass/helpers/mixins" as *;
+
+.contact-us-page {
+  .contact-heading {
+    text-align: center;
+    padding: 0 0 45px;
+    margin: 0 0 45px;
+    border-bottom: $border-one;
+
+    span {
+      font-size: 14px;
+      font-weight: 600;
+      color: $bs-purple;
+    }
+
+    .title {
+      font-size: 32px;
+      color: $bs-black;
+    }
+
+    .description {
+      font-size: 15px;
+      color: $bs-gray;
+      margin: 7px 0 0;
+      max-width: 85%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 20px));
+    gap: 40px;
+
+    @include breakpoints("sm") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

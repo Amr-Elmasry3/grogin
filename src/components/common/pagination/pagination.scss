@@ -1,0 +1,25 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+.my-pagination {
+  .MuiPagination-ul {
+    justify-content: center;
+  }
+
+  .MuiButtonBase-root.Mui-selected {
+    background-color: $bs-purple !important;
+    color: $bs-white !important;
+    border: none !important;
+  }
+
+  .MuiButtonBase-root {
+    background-color: $bs-gray-200;
+    font-weight: 600;
+    color: $bs-black !important;
+    transition: $transition;
+
+    &:hover {
+      background-color: $bs-gray-300;
+    }
+  }
+}

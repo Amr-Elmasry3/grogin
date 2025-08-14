@@ -1,0 +1,114 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: $bs-gray-300;
+  border-radius: $radius-one;
+  padding: 0 10px;
+  transition: $transition;
+
+  &:focus-within {
+    border: $border-two;
+    border-width: 2px;
+  }
+
+  .my-input {
+    flex: 1;
+  }
+
+  .icon {
+    font-size: 18px;
+    color: $bs-black;
+    cursor: pointer;
+  }
+
+  .search-results {
+    position: absolute;
+    z-index: 100;
+    background-color: $bs-white;
+    border: none;
+    border-radius: $radius-one;
+    width: 100%;
+    max-height: 0;
+    top: calc(100% + 5px);
+    left: 0;
+    overflow: scroll;
+    transition: $transition;
+
+    &.open {
+      max-height: 300px;
+      border: $border-one;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .product {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 10px;
+
+      &:not(:last-of-type) {
+        border-bottom: $border-one;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        border: $border-one;
+        border-radius: $radius-one;
+      }
+
+      .name {
+        flex: 1;
+        font-size: 13px;
+        font-weight: 600;
+        color: $bs-black;
+        line-height: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        transition: $transition;
+
+        &:hover {
+          color: $bs-purple;
+          text-decoration: underline;
+          text-decoration-color: $bs-purple;
+          -moz-text-decoration-color: $bs-purple;
+        }
+      }
+
+      .price-box {
+        .new-price {
+          font-size: 13px;
+          font-weight: bolder;
+          color: $bs-red;
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: end;
+          gap: 2px;
+
+          .old-price {
+            font-size: 11px;
+            color: $bs-black;
+            text-decoration: line-through;
+            text-decoration-color: $bs-danger;
+            -moz-text-decoration-color: $bs-danger;
+          }
+        }
+      }
+    }
+
+    .no-products {
+      padding: 10px;
+      font-size: 15px;
+      color: $bs-black;
+    }
+  }
+}

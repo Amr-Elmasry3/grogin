@@ -1,0 +1,28 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+.scroll-up {
+  position: fixed;
+  bottom: 15px;
+  z-index: 100;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: $border-one;
+  border-color: $bs-purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: $transition;
+
+  .progress {
+    position: absolute;
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .icon {
+    font-size: 20px;
+    color: $bs-purple;
+  }
+}

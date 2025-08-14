@@ -1,0 +1,62 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+.login-model {
+  position: fixed;
+  z-index: 110;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff54;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  &.open {
+    display: flex;
+  }
+
+  .model-box {
+    background-color: $bs-white;
+    border: $border-one;
+    border-radius: $radius-one;
+    padding: 20px;
+
+    .message {
+      font-size: 22px;
+      color: $bs-black;
+    }
+
+    .btns-box {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      // justify-content: end;
+      gap: 5px;
+      margin: 20px 0 0;
+
+      a {
+        .btn {
+          background-color: $bs-purple;
+        }
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+        color: $bs-white;
+        border-radius: $radius-one;
+        background-color: $bs-black;
+
+        &::before {
+          background-color: transparent;
+        }
+
+        .icon {
+          display: none;
+        }
+      }
+    }
+  }
+}

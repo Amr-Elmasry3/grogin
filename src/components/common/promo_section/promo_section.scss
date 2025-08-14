@@ -1,0 +1,56 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../../sass/helpers/mixins" as *;
+
+.promo-section {
+  display: grid;
+  gap: 20px 16px;
+  margin: 0 0 30px;
+
+  &.two {
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 8px), 1fr));
+
+    @include breakpoints("sm") {
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+  }
+
+  &.three {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  &.four {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+
+    .promo-card {
+      height: 360px;
+    }
+  }
+
+  .promo-card {
+    border-radius: $radius-one;
+    padding: 15px;
+
+    .date {
+      font-size: 13px;
+      color: $bs-red;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+      color: $bs-black;
+      margin: 15px 0;
+      max-width: 60%;
+      line-height: 1.6;
+    }
+
+    .sub-title {
+      font-size: 14px;
+      color: $bs-gray;
+      margin: 0 0 25px;
+    }
+  }
+}

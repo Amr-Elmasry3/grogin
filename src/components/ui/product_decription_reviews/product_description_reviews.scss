@@ -1,0 +1,296 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../../sass/helpers/mixins" as *;
+
+.product-description-reviews {
+  margin: 70px 0 50px;
+
+  .taps {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0 0 30px;
+    border-bottom: $border-one;
+
+    .tap-title {
+      font-weight: 600;
+      color: $bs-black;
+      position: relative;
+      line-height: 2.5;
+      transition: $transition;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: $bs-purple;
+        left: 0;
+        bottom: 0;
+        transition: $transition;
+      }
+
+      &.active {
+        color: $bs-purple;
+      }
+
+      &.active::before {
+        width: 100%;
+      }
+    }
+  }
+
+  .product-description {
+    p {
+      font-size: 16px;
+      color: $bs-black;
+
+      &:first-of-type {
+        margin: 0 0 15px;
+      }
+    }
+  }
+
+  .product-reviews {
+    .head {
+      font-size: 22px;
+      font-weight: 600;
+      color: $bs-black;
+    }
+
+    .rate-details {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin: 30px 0 0;
+      padding: 0 0 30px;
+      border-bottom: $border-one;
+
+      .rate {
+        font-size: 50px;
+        font-weight: 500;
+        color: $bs-black;
+      }
+
+      .average-box {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .average {
+          font-size: 15px;
+          font-weight: 600;
+          color: $bs-black;
+        }
+      }
+
+      .rates-count {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .box {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+
+          .icon,
+          .key,
+          .value {
+            font-size: 14px;
+          }
+
+          .icon {
+            color: #faaf00;
+          }
+
+          .key {
+            font-weight: 500;
+            color: $bs-black;
+          }
+
+          .progress {
+            width: 320px;
+            height: 6px;
+            background-color: $bs-gray-200;
+            border-radius: $radius-one;
+            display: flex;
+            overflow: hidden;
+
+            @include breakpoints("sm") {
+              width: 240px;
+            }
+
+            .child {
+              background-color: #faaf00;
+            }
+          }
+
+          .value {
+            color: $bs-gray;
+          }
+        }
+      }
+    }
+
+    .reviews-details {
+      .box {
+        display: flex;
+        gap: 20px;
+        padding: 30px 0;
+        border-bottom: $border-one;
+
+        .img-box {
+          position: relative;
+          min-width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          background-color: $bs-gray-500;
+          overflow: hidden;
+
+          .icon {
+            font-size: 30px;
+            color: $bs-white;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+          }
+        }
+
+        .details {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+
+          .name-date {
+            font-size: 15px;
+            font-weight: 600;
+            color: $bs-gray;
+
+            .date {
+              font-size: 14px;
+              font-weight: 400;
+            }
+          }
+
+          .reviews-content {
+            font-size: 15px;
+            color: $bs-black;
+          }
+        }
+      }
+    }
+
+    .add-review {
+      margin: 30px 0 0;
+
+      .title {
+        font-weight: 600;
+        color: $bs-black;
+        margin: 0 0 10px;
+      }
+
+      form {
+        .choose-rate,
+        .set-review {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+          margin: 0 0 15px;
+
+          label {
+            font-size: 12px;
+            font-weight: 500;
+            color: $bs-gray;
+
+            span {
+              color: $bs-purple;
+            }
+          }
+        }
+
+        .choose-rate {
+          .stars-box {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px 0;
+
+            .box {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              cursor: pointer;
+
+              padding: 0 12px;
+
+              &:first-of-type {
+                padding-left: 0;
+              }
+
+              &:not(:last-of-type) {
+                border-right: $border-one;
+              }
+
+              &.active {
+                .icon {
+                  color: #faaf00;
+                }
+              }
+
+              .icon {
+                font-size: 14px;
+                color: $bs-gray;
+                transition: $transition;
+              }
+            }
+          }
+        }
+
+        .set-review {
+          textarea {
+            height: 36px;
+            font-size: 15px;
+            color: $bs-gray;
+            background-color: transparent;
+            border: $border-one;
+            border-radius: $radius-one;
+            padding: 0 7px;
+            width: 60%;
+            height: 140px;
+            resize: none;
+            transition: $transition;
+
+            @include breakpoints("sm") {
+              width: 100%;
+            }
+
+            &:focus {
+              border-color: $bs-purple;
+              border-width: 2px;
+            }
+          }
+        }
+
+        .btn {
+          background-color: $bs-purple;
+          color: $bs-white;
+          border-radius: $radius-one;
+
+          .icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

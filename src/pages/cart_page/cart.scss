@@ -1,0 +1,136 @@
+// Import Variables
+@use "../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../sass/helpers/mixins" as *;
+
+.cart-page {
+  .container {
+    .cart-free-shipping {
+      margin: 0 0 30px;
+      padding: 15px;
+      background-color: #fff5f5;
+      border: $border-one;
+      border-color: #fca1a1;
+      border-radius: $radius-one;
+
+      &.done {
+        background-color: #1987541a;
+
+        border-color: #1987548f;
+
+        p {
+          span {
+            color: $bs-success;
+          }
+        }
+
+        .shipping-progress {
+          span {
+            background-color: $bs-success;
+          }
+        }
+      }
+
+      p {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 15px;
+        font-weight: 500;
+        color: $bs-black;
+
+        span {
+          font-weight: 700;
+          color: $bs-red;
+        }
+      }
+
+      .shipping-progress {
+        margin: 12px 0 0;
+        width: 100%;
+        height: 4px;
+        background-color: $bs-gray-300;
+        border-radius: $radius-one;
+        display: flex;
+        overflow: hidden;
+
+        span {
+          height: 100%;
+          background-color: red;
+        }
+      }
+    }
+
+    .cart-totals {
+      margin: 30px 0 0;
+      padding: 10px;
+      border: $border-one;
+      border-radius: $radius-one;
+      width: 500px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include breakpoints("xs") {
+        width: 100%;
+      }
+
+      .title {
+        font-size: 16px;
+        font-weight: 700;
+        color: $bs-purple;
+      }
+
+      .details {
+        border: $border-one;
+        border-radius: $radius-one;
+
+        .box {
+          display: flex;
+          align-items: center;
+
+          &:not(:last-of-type) {
+            border-bottom: $border-one;
+          }
+
+          span {
+            padding: 7px;
+            width: 50%;
+            font-size: 14px;
+            font-weight: 600;
+
+            &.key {
+              color: $bs-black;
+            }
+
+            &.value {
+              color: $bs-purple;
+              border-left: $border-one;
+            }
+          }
+        }
+      }
+    }
+
+    .cart-totals-btns {
+      margin: 20px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      a {
+        .btn {
+          background-color: $bs-purple;
+          color: $bs-white;
+
+          .icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

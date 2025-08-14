@@ -1,0 +1,94 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../../sass/helpers/mixins" as *;
+
+.new-arrivals {
+  position: relative;
+
+  .new-arrivals-content {
+    .mySwiper {
+      position: initial;
+      border: $border-one;
+      border-right: none;
+      border-radius: $radius-one;
+      overflow: hidden;
+
+      .slide {
+        .product-card {
+          border-right: $border-one;
+        }
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        position: absolute;
+        z-index: 5;
+        top: 57%;
+        transform: translateX(50%);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: $bs-white;
+        border: $border-one;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-transform: translateX(50%);
+        -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        -o-transform: translateX(50%);
+        transition: $transition;
+        -webkit-transition: $transition;
+        -moz-transition: $transition;
+        -ms-transition: $transition;
+        -o-transition: $transition;
+
+        @include breakpoints("xs") {
+          width: 30px;
+          height: 30px;
+        }
+
+        @include breakpoints("xxs") {
+          width: 28px;
+          height: 28px;
+        }
+      }
+
+      .swiper-button-prev:hover,
+      .swiper-button-next:hover {
+        background-color: $bs-gray-100;
+      }
+
+      .swiper-button-prev {
+        left: 0;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+      }
+
+      .swiper-button-next {
+        right: 0;
+        transform: translateX(50%);
+      }
+
+      .swiper-button-disabled {
+        opacity: 0.4;
+      }
+
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        font-size: 14px;
+        font-weight: bold;
+        color: $bs-black;
+
+        @include breakpoints("xxs") {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+.our-offices {
+  .heading {
+    .title {
+      font-weight: 600;
+      color: $bs-black;
+      margin: 0 0 10px;
+    }
+
+    .description {
+      font-size: 14px;
+      color: $bs-gray;
+    }
+  }
+
+  .our-offices-details {
+    margin: 40px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .box {
+      .country {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .icon {
+          color: $bs-black;
+        }
+
+        span {
+          font-size: 14px;
+          color: $bs-black;
+        }
+      }
+
+      .details {
+        margin: 15px 0 0;
+        padding-left: 30px;
+
+        .office-name {
+          font-size: 17px;
+          font-weight: 600;
+          color: $bs-black;
+        }
+
+        .location {
+          font-size: 14px;
+          color: $bs-gray;
+          margin: 7px 0;
+        }
+
+        .phone,
+        .email {
+          display: block;
+          font-size: 15px;
+          font-weight: 600;
+        }
+
+        .phone {
+          color: $bs-black;
+          margin: 0 0 5px;
+        }
+
+        .email {
+          color: $bs-primary;
+        }
+      }
+    }
+  }
+}

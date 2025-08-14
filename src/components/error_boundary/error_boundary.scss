@@ -1,0 +1,19 @@
+// Import Variables
+@use "../../sass/helpers/variables" as *;
+
+.error-fallback {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    color: $bs-purple;
+  }
+
+  img {
+    width: 170px;
+  }
+}

@@ -1,0 +1,29 @@
+// Import Mixins
+@use "../../sass/helpers/mixins" as *;
+
+.blogs-page,
+.blog-details-page {
+  .container {
+    display: flex;
+    gap: 25px;
+
+    @include breakpoints("sm") {
+      flex-direction: column;
+
+      .blogs-content,
+      .blog-details-content,
+      .blogs-sidebar {
+        width: 100% !important;
+      }
+    }
+
+    .blogs-content,
+    .blog-details-content {
+      flex: 1;
+    }
+
+    .blogs-sidebar {
+      width: 260px;
+    }
+  }
+}

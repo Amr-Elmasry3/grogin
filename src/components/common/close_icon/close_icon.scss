@@ -1,0 +1,26 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: $bs-gray-200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .icon {
+    font-size: 20px;
+    color: $bs-gray-600;
+    transition: $transition;
+  }
+
+  &:hover > .icon {
+    transform: rotate(90deg);
+  }
+}

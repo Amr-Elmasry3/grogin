@@ -1,0 +1,118 @@
+// Import Variables
+@use "../../../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../../../sass/helpers/mixins" as *;
+
+.other-links {
+  border-bottom: $border-one;
+
+  @include breakpoints("xl") {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    gap: 30px;
+    height: 43px;
+
+    .categories {
+      @include breakpoints("xl") {
+        display: none;
+      }
+    }
+
+    .main-links {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      @include breakpoints("xl") {
+        display: none;
+      }
+
+      .link {
+        position: relative;
+        font-size: 15px;
+        font-weight: 600;
+        color: $bs-black;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        transition: $transition;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 1px;
+          background-color: $bs-purple;
+          left: 0;
+          bottom: 0;
+          transition: $transition;
+        }
+
+        &:hover {
+          color: $bs-purple;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+
+    .products-category {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      p {
+        font-size: 15px;
+        font-weight: 600;
+        color: $bs-black;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+
+        &:last-of-type {
+          color: $bs-red;
+        }
+
+        .sale {
+          background-image: linear-gradient(90deg, $bs-red, $bs-orange);
+          padding: 4px;
+          text-transform: uppercase;
+          font-size: 10px;
+          font-weight: bold;
+          color: $bs-white;
+          border-radius: 4px;
+        }
+      }
+
+      .products-box {
+        position: absolute;
+        z-index: 95;
+        background-color: $bs-white;
+        border: $border-one;
+        border-bottom-left-radius: $radius-one;
+        border-bottom-right-radius: $radius-one;
+        top: 203px;
+        left: 0;
+        margin: 0 90px;
+        padding: 15px;
+        display: none;
+
+        .box {
+          width: 20%;
+
+          &:not(:last-of-type) {
+            border-right: $border-one;
+          }
+        }
+      }
+    }
+  }
+}

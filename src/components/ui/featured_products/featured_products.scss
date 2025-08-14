@@ -1,0 +1,70 @@
+// Import Variables
+@use "../../../sass/helpers/variables" as *;
+
+// Import Mixins
+@use "../../../sass/helpers/mixins" as *;
+
+.featured-products {
+  margin: 0 0 30px;
+
+  .featured-prodcuts-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    border: $border-one;
+    border-right: none;
+    border-bottom: none;
+    border-radius: $radius-one;
+    -webkit-border-radius: $radius-one;
+    -moz-border-radius: $radius-one;
+    -ms-border-radius: $radius-one;
+    -o-border-radius: $radius-one;
+    overflow: hidden;
+
+    .box {
+      .product-card {
+        border-right: $border-one;
+        border-bottom: $border-one;
+        border-bottom-width: 2px;
+        display: flex;
+        align-items: center;
+        height: 250px;
+
+        @include breakpoints("xl") {
+          display: block;
+          height: initial;
+        }
+
+        .img-box {
+          border-bottom: none;
+          min-width: 45%;
+          position: initial;
+
+          @include breakpoints("xl") {
+            border-bottom: $border-one;
+            position: relative;
+            width: 100%;
+            min-width: initial;
+          }
+        }
+
+        .card-actions {
+          left: 50%;
+          transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+
+          @include breakpoints("xl") {
+            left: initial;
+            transform: translateX(0);
+            -webkit-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+}
