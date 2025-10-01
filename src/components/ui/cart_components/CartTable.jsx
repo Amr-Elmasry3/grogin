@@ -71,7 +71,11 @@ function CartTable({ products }) {
                   <TableRow key={item.id} className="table-row">
                     <TableCell align="center" className="table-cell">
                       <div className="product-img">
-                        <img src={item.images[0]} alt={`img${item.id}...`} />
+                        <img
+                          src={item.images[0]}
+                          alt={`img${item.id}...`}
+                          loading="lazy"
+                        />
                       </div>
                     </TableCell>
 

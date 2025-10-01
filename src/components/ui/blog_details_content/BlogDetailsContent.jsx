@@ -28,6 +28,7 @@ function BlogDetailsContent({ id }) {
           <img
             src={blogs.data[id - 1].img}
             alt={`img${blogs.data[id - 1].id}...`}
+            loading="lazy"
           />
         </div>
 

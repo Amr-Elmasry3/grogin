@@ -17,6 +17,7 @@ function SidebarUi({ isOpen, handleClickCloseIcon, isLogin }) {
         <img
           src="https://klbtheme.com/grogin/wp-content/uploads/2023/11/grogin-logo-dark.png"
           alt="Logo..."
+          loading="lazy"
         />
 
         <CloseIcon func={handleClickCloseIcon} />

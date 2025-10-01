@@ -36,7 +36,7 @@ function BlogsContent() {
         .map((item) => {
           return (
             <div className="blog-box" key={item.id}>
-              <img src={item.img} alt={`img${item.id}...`} />
+              <img src={item.img} alt={`img${item.id}...`} loading="lazy" />
 
               <Link to={`/blog-details/${item.id}`} className="title">
                 {item.title}

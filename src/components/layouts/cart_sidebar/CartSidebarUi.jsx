@@ -56,7 +56,11 @@ function CartSidebarUi({
                   </div>
 
                   <div className="img-box">
-                    <img src={item.images[0]} alt={`img${item.id}...`} />
+                    <img
+                      src={item.images[0]}
+                      alt={`img${item.id}...`}
+                      loading="lazy"
+                    />
                   </div>
 
                   <div className="details">

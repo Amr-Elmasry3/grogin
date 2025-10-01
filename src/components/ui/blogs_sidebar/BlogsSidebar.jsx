@@ -24,7 +24,7 @@ function BlogsSidebar() {
           {blogs.map((item) => {
             return (
               <div className="box" key={item.id}>
-                <img src={item.img} alt={`img${item.id}...`} />
+                <img src={item.img} alt={`img${item.id}...`} loading="lazy" />
 
                 <div className="details">
                   <Link to={`/blog-details/${item.id}`}>{item.title}</Link>

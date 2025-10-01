@@ -9,7 +9,7 @@ function ErrorFallback() {
     <div className="error-fallback">
       <h2>An unexpected error occurred</h2>
 
-      <img src={errorImg} alt="error..." />
+      <img src={errorImg} alt="error..." loading="lazy" />
     </div>
   );
 }

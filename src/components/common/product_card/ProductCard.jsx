@@ -20,7 +20,7 @@ function ProductCard({ product, children }) {
       )}
 
       <div className="img-box">
-        <img src={product.images[0]} alt={`img${product.id}`} />
+        <img src={product.images[0]} alt={`img${product.id}`} loading="lazy" />
 
         <CardActions product={product} />
 

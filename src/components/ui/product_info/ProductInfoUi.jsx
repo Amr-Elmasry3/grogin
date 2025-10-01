@@ -55,6 +55,7 @@ function ProductInfoUi({
                   src={mainImg ? mainImg : product.images[0]}
                   alt={`img${product.id}`}
                   className="main-img"
+                  loading="lazy"
                 />
 
                 {[...product.images].length > 1 ? (
@@ -64,6 +65,7 @@ function ProductInfoUi({
                         <img
                           src={item}
                           alt={`img${index + 1}...`}
+                          loading="lazy"
                           key={index + 1}
                           onClick={(eve) => {
                             handleMainImg(eve.target.src);

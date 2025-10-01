@@ -23,7 +23,11 @@ function CheckoutTotals({ cart }) {
                 return (
                   <div className="product-box" key={item.id}>
                     <div className="product-img">
-                      <img src={item.images[0]} alt={`img${item.id}...`} />
+                      <img
+                        src={item.images[0]}
+                        alt={`img${item.id}...`}
+                        loading="lazy"
+                      />
                     </div>
 
                     <div className="info">

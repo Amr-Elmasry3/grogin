@@ -1,7 +1,7 @@
 export const promos = [
   {
     id: 1,
-    img: "https://klbtheme.com/grogin/wp-content/plugins/grogin-core/elementor/images/banner-01.jpg",
+    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-01.jpg",
     date: "Only this week",
     title: "Quality eggs at an affordable price",
     subTitle: "Feed your family the best",
@@ -64,7 +64,7 @@ export const promos = [
   },
   {
     id: 10,
-    img: "https://klbtheme.com/grogin/wp-content/plugins/grogin-core/elementor/images/banner-10.jpg",
+    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-10.jpg",
     date: "Only this week",
     title: "We are always here to help you with grocery",
     subTitle: "A different of kind grocery store",
