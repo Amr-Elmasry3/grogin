@@ -26,7 +26,7 @@ A modern e-commerce web application for browsing grocery products, managing cart
 
 ## 📸 Preview
 
-![Grogin Preview]([./screenshots/preview.png](https://res.cloudinary.com/dqymivlkf/image/upload/v1755647374/grogin-1_wagggh.png))
+![Grogin Preview](https://res.cloudinary.com/dqymivlkf/image/upload/v1755647374/grogin-1_wagggh.png)
 
 ---
 
