@@ -1,12 +1,37 @@
-# React + Vite
+# 🛒 Grogin Grocery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce web application for browsing grocery products, managing cart and wishlist, and exploring products with filtering and sorting features.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- Product filtering and sorting
+- Cart and wishlist management
+- Responsive design for different screen sizes
+- Product details pages
+- Smooth and modern UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- React.js
+- Redux
+- React Router
+- SCSS
+- Axios
+
+---
+
+## 📸 Preview
+
+https://res.cloudinary.com/dqymivlkf/image/upload/v1755647374/grogin-1_wagggh.png
+
+---
+
+## 🔗 Live Demo
+
+https://amr-elmasry3.github.io/grogin/
+
+---
