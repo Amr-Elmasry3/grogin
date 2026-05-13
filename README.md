@@ -20,6 +20,7 @@ A modern e-commerce web application for browsing grocery products, managing cart
 - Redux
 - React Router
 - SCSS
+- Tailwind Css
 - Axios
 
 ---
