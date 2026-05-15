@@ -1,77 +1,77 @@
 export const promos = [
   {
     id: 1,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-01.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-01.jpg",
     date: "Only this week",
     title: "Quality eggs at an affordable price",
     subTitle: "Feed your family the best",
   },
   {
     id: 2,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-02.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-02.jpg",
     date: "Only this week",
     title: "Snacks that nourishes our mind and body",
     subTitle: "Only this week, dont miss...",
   },
   {
     id: 3,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-03.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-03.jpg",
     date: "Only this week",
     title: "Unbeatable quality, Unbeatable prices",
     subTitle: "A different of kind grocery store",
   },
   {
     id: 4,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-04.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-04.jpg",
     date: "Only this week",
     title: "Provides you experienced quality products",
     subTitle: "Feed your family the best",
   },
   {
     id: 5,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-05.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-05.jpg",
     date: "Only this week",
     title: "Shopping with us for better quality and best price",
     subTitle: "Only this week, dont miss...",
   },
   {
     id: 6,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-06.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-06.jpg",
     date: "Only this week",
     title: "Get the best quality products at the lowest prices",
     subTitle: "Feed your family the best",
   },
   {
     id: 7,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-07.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-07.jpg",
     date: "Only this week",
     title: "Where you get your all favorite brands under one roof",
     subTitle: "A different of kind grocery store",
   },
   {
     id: 8,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-08.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-08.jpg",
     date: "Only this week",
     title: "Make your grocery shoppinf easy with us",
     subTitle: "Only this week, dont miss...",
   },
   {
     id: 9,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-09.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-09.jpg",
     date: "Only this week",
     title: "Get your everyday needs here with us",
     subTitle: "Only this week, dont miss...",
   },
   {
     id: 10,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-10.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-10.jpg",
     date: "Only this week",
     title: "We are always here to help you with grocery",
     subTitle: "A different of kind grocery store",
   },
   {
     id: 11,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-11.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/banner-11.jpg",
     date: "Only this week",
     title: "With your favorite food, we will make you mood",
     subTitle: "Only this week, dont miss...",
@@ -113,7 +113,7 @@ export const companiesData = [
 export const blogs = [
   {
     id: 1,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/blog-post-01.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/blog-post-01.jpg",
     title: "How grocers are approaching delivery as the market evolves",
     date: "November 3, 2024",
     blog: "Bilmålvakt treskade i nibel den mobilmissbruk deren jyn nöning osk heterostik i rel ultran. Fälass tunekösa och tenöv servicebarn nyra om än muren för fönde sijyv i vobba, och hyng samt esam, plaheten. Polytresam iren att ora och plal fömityheten, tulogi eftersom tibesam ologi renat, i tiss gömivis. Supraskop prebelig för att psykolog geon sper",
@@ -140,7 +140,7 @@ export const blogs = [
 
   {
     id: 2,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/blog-post-03.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/blog-post-03.jpg",
     title: "Consumer want grocer to use AI to help them save money Dunnhumby",
     date: "November 4, 2024",
     blog: "Bilmålvakt treskade i nibel den mobilmissbruk deren jyn nöning osk heterostik i rel ultran. Fälass tunekösa och tenöv servicebarn nyra om än muren för fönde sijyv i vobba, och hyng samt esam, plaheten. Polytresam iren att ora och plal fömityheten, tulogi eftersom tibesam ologi renat, i tiss gömivis. Supraskop prebelig för att psykolog geon sper",
@@ -167,7 +167,7 @@ export const blogs = [
 
   {
     id: 3,
-    img: "https://klbtheme.com/grogin/wp-content/uploads/2023/11/blog-post-04.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/blog-post-04.jpg",
     title:
       "Order up! How grocers are replicating the restaurant experience in retail",
     date: "November 7, 2024",
@@ -195,7 +195,7 @@ export const blogs = [
 
   {
     id: 4,
-    img: "https://klbtheme.com/bacola/wp-content/uploads/2021/05/blog-5.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/bacola/wp-content/uploads/2021/05/blog-5.jpg",
     title: "The Problem With Typefaces on the Web",
     date: "November 8, 2024",
     blog: "Bilmålvakt treskade i nibel den mobilmissbruk deren jyn nöning osk heterostik i rel ultran. Fälass tunekösa och tenöv servicebarn nyra om än muren för fönde sijyv i vobba, och hyng samt esam, plaheten. Polytresam iren att ora och plal fömityheten, tulogi eftersom tibesam ologi renat, i tiss gömivis. Supraskop prebelig för att psykolog geon sper",
@@ -222,7 +222,7 @@ export const blogs = [
 
   {
     id: 5,
-    img: "https://klbtheme.com/bacola/wp-content/uploads/2021/05/blog-3.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/bacola/wp-content/uploads/2021/05/blog-3.jpg",
     title: "But I must explain to you how all this mistaken idea",
     date: "November 10, 2024",
     blog: "Bilmålvakt treskade i nibel den mobilmissbruk deren jyn nöning osk heterostik i rel ultran. Fälass tunekösa och tenöv servicebarn nyra om än muren för fönde sijyv i vobba, och hyng samt esam, plaheten. Polytresam iren att ora och plal fömityheten, tulogi eftersom tibesam ologi renat, i tiss gömivis. Supraskop prebelig för att psykolog geon sper",
@@ -249,7 +249,7 @@ export const blogs = [
 
   {
     id: 6,
-    img: "https://klbtheme.com/bacola/wp-content/uploads/2021/05/blog-1.jpg",
+    img: "https://images.weserv.nl/?url=https://klbtheme.com/bacola/wp-content/uploads/2021/05/blog-1.jpg",
     title: "English Breakfast Tea With Tasty Donut Desserts",
     date: "November 22, 2024",
     blog: "Bilmålvakt treskade i nibel den mobilmissbruk deren jyn nöning osk heterostik i rel ultran. Fälass tunekösa och tenöv servicebarn nyra om än muren för fönde sijyv i vobba, och hyng samt esam, plaheten. Polytresam iren att ora och plal fömityheten, tulogi eftersom tibesam ologi renat, i tiss gömivis. Supraskop prebelig för att psykolog geon sper",

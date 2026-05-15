@@ -8,7 +8,7 @@ function AboutUs() {
         className="about-hero"
         style={{
           backgroundImage:
-            "url(https://klbtheme.com/bacola/wp-content/uploads/2021/08/about-header.jpg)",
+            "url(https://images.weserv.nl/?url=https://klbtheme.com/bacola/wp-content/uploads/2021/08/about-header.jpg)",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
@@ -43,12 +43,12 @@ function AboutUs() {
 
           <div className="images">
             <img
-              src="https://klbtheme.com/grogin/wp-content/uploads/2023/11/about-image-01.jpg"
+              src="https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/about-image-01.jpg"
               alt="img1..."
             />
 
             <img
-              src="https://klbtheme.com/grogin/wp-content/uploads/2023/11/about-image-02.jpg"
+              src="https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/about-image-02.jpg"
               alt="img2..."
             />
           </div>
@@ -79,7 +79,7 @@ function AboutUs() {
 
           <div className="image-box">
             <img
-              src="https://klbtheme.com/grogin/wp-content/uploads/2023/11/about-image-03.jpg"
+              src="https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/about-image-03.jpg"
               alt="img..."
             />
 

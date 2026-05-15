@@ -35,7 +35,7 @@ function LogoSectionUi({
 
         <div className="logo">
           <img
-            src="https://klbtheme.com/grogin/wp-content/uploads/2023/11/grogin-logo-dark.png"
+            src="https://images.weserv.nl/?url=https://klbtheme.com/grogin/wp-content/uploads/2023/11/grogin-logo-dark.png"
             alt="logo..."
             loading="lazy"
           />
